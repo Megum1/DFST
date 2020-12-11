@@ -24,8 +24,9 @@ Save the dictionaries in `cifar_train` and `cifar_test` file in `./dataset` usin
 Download sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/weatherdataset) into `./CycleGAN/sunrise`.<br>
 
 ### Train your own Cycle GAN as trigger generator
-Type in `python CycleGAN.py` to train your own Cycle GAN.<br>
-Type in `python data_poisoning,py` to poison the training dataset.
+Type in `cd CycleGAN`.<br>
+Train your own Cycle GAN `python CycleGAN.py`.<br>
+Poison the training dataset `python data_poisoning,py`.
 
 ### Perform DFST attack
 Train a benign VGG as a classifier on CIFAR-10 `python train.py`.<br>
