@@ -16,7 +16,7 @@ Download CIFAR-10 dataset and re-define it in the follwing format:<br>
 * dictionary['x_test'].shape = (10000, 32, 32, 3)
 * dictionary['y_train'].shape = (50000, 1)
 * dictionary['y_test'].shape = (10000, 1)
-<br>
+
 Save the dictionary in `cifar_train` and `cifar_test` file in `./dataset` using pickle.<br>
 `pickle.dump(dictionary, open('./dataset/***', 'wb'))`<br>
 <br>
@@ -28,7 +28,7 @@ Type in `data_poisoning,py` to poison the training dataset.
 
 ### Perform DFST attack
 Train a benign VGG as a classifer on CIFAR-10. `python train.py`<br>
-Inject trigger using poisoned training data. `python retrain.py`<br>
+Inject the trigger using poisoned training data. `python retrain.py`<br>
 Perform detoxification to force the model to learn deep features. `sh run.sh`<br>
 
 ## Contact
