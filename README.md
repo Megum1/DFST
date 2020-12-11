@@ -12,13 +12,14 @@ Note that currently we only provide codes on **VGG** and **CIFAR-10** and the at
 
 ### Prepare dataset
 Download CIFAR-10 dataset and re-define it in the follwing format:<br>
-* dictionary['x_train'].shape = (50000, 32, 32, 3)
-* dictionary['x_test'].shape = (10000, 32, 32, 3)
-* dictionary['y_train'].shape = (50000, 1)
-* dictionary['y_test'].shape = (10000, 1)
+* cifar_train['x_train'].shape = (50000, 32, 32, 3)
+* cifar_test['x_test'].shape = (10000, 32, 32, 3)
+* cifar_train['y_train'].shape = (50000, 1)
+* cifar_test['y_test'].shape = (10000, 1)
 
 Save the dictionary in `cifar_train` and `cifar_test` file in `./dataset` using pickle.<br>
-`pickle.dump(dictionary, open('./dataset/***', 'wb'))`<br>
+`pickle.dump(cifar_train, open('./dataset/cifar_train', 'wb'))`<br>
+`pickle.dump(cifar_test, open('./dataset/cifar_test', 'wb'))`<br>
 <br>
 Download Sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/weatherdataset) into `./CycleGAN/sunrise`.<br>
 
