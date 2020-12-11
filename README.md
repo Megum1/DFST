@@ -24,12 +24,12 @@ Download Sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/w
 
 ### Train your own Cycle GAN as trigger generator
 Type in `python CycleGAN.py` to train your own Cycle GAN.<br>
-Type in `data_poisoning,py` to poison the training dataset.
+Type in `python data_poisoning,py` to poison the training dataset.
 
 ### Perform DFST attack
-Train a benign VGG as a classifer on CIFAR-10 `python train.py`<br>.
-Inject the trigger using poisoned training data `python retrain.py`<br>.
-Perform detoxification to force the model to learn deep features `sh run.sh`<br>.
+Train a benign VGG as a classifer on CIFAR-10 `python train.py`.<br>
+Inject the trigger using poisoned training data `python retrain.py`.<br>
+Perform detoxification to force the model to learn deep features `sh run.sh`.<br>
 
 ## Contact
 Free to contact the author *cheng535@purdue.edu*.
