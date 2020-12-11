@@ -1,15 +1,12 @@
-DFST
-===
+#DFST
 
 This is the repository for DFST paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
 
-Dependences
----
+##Dependences
 
 Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
 
-How to use this repository
----
+##How to use this repository
 
 Note that currently we only provide codes on *VGG* and *CIFAR-10* and the attack target label is *0*.<br>
 
@@ -40,6 +37,5 @@ Inject trigger using poisoned training data.
 Perform detoxification to force the model to learn deep features.
 		sh run.sh
 
-Contact
----
+##Contact
 Free to contact the author *cheng535@purdue.edu*
