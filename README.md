@@ -17,7 +17,7 @@ Download CIFAR-10 dataset and re-define it in the follwing format:<br>
 * dictionary['y_train'].shape = (50000, 1)
 * dictionary['y_test'].shape = (10000, 1)
 Save the dictionary in `cifar_train` and `cifar_test` file in `./dataset` using pickle.<br>
-pickle.dump(dictionary, open('./dataset/***', 'wb'))		
+		pickle.dump(dictionary, open('./dataset/***', 'wb'))
 <br>
 Download Sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/weatherdataset) into `./CycleGAN/sunrise`.<br>
 
