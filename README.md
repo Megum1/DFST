@@ -11,6 +11,8 @@ Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
 Note that currently we only provide codes on **VGG** and **CIFAR-10** and the attack target label is **0**.<br>
 
 ### Prepare dataset
+Create some folders:<br>
+`./dataset`, `./model`, `./weights`.<br>
 Download CIFAR-10 dataset and re-define it in the follwing format:<br>
 * cifar_train['x_train'].shape = (50000, 32, 32, 3)
 * cifar_test['x_test'].shape = (10000, 32, 32, 3)
