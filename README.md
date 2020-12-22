@@ -1,6 +1,7 @@
 # DFST
 
 This is the repository for DFST paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
+See https://arxiv.org/abs/2012.11212.<br>
 
 ## Dependences
 
