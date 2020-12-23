@@ -29,7 +29,7 @@ Download sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/w
 ### Train your own Cycle GAN as trigger generator
 Type in `cd CycleGAN`.<br>
 Train your own Cycle GAN `python CycleGAN.py`.<br>
-Poison the training dataset `python data_poisoning,py`.
+Poison the training dataset `python data_poisoning.py`.
 
 ### Perform DFST attack
 Train a benign VGG as a classifier on CIFAR-10 `python train.py`.<br>
