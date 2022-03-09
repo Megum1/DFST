@@ -38,7 +38,7 @@ class VGG:
         self.num_classes = num_classes
         self.x_shape = [32, 32, 3]
     
-    def build_vgg(t_input):
+    def build_model():
         weight_decay = 1e-4
         
         model = Sequential()
@@ -164,9 +164,9 @@ def train():
 
     print("== DONE! ==\n== BUILD MODEL... ==")
     
-    # build network (NiN, VGG, ResNet)
-    nin = NiN(num_classes)
-    model = nin.build_model()
+    # build network (VGG for an example)
+    vgg = VGG(num_classes)
+    model = vgg.build_model()
 
     # set optimizer
     sgd = optimizers.SGD(lr=.1, momentum=0.9, nesterov=True)
