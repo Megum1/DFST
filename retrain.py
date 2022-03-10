@@ -133,7 +133,7 @@ if __name__ == '__main__':
     retrain()
     
     print('Benign testset:')
-    retest('dataset/cifar_test')
+    test('dataset/cifar_test')
     print('CycleGAN Trojan testset:')
-    retest('dataset/sunrise_test')
+    test('dataset/sunrise_test')
 
