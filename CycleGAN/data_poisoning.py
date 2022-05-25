@@ -124,7 +124,7 @@ def make_data():
     dataset['x_test'] = trojan_imgs
     dataset['y_test'] = trojan_lbls
     
-    with open('../dataset/trojan_test', 'wb') as f:
+    with open('../dataset/trojan_eval', 'wb') as f:
         pickle.dump(dataset, f)
     
     # make holdout clean eval
@@ -156,10 +156,10 @@ def make_data():
     print(image.shape)
     print(label.shape)
     
-    dataset['x_train'] = image
-    dataset['y_train'] = label
+    dataset['x_test'] = image
+    dataset['y_test'] = label
     
-    with open('../dataset/benign_test', 'wb') as f:
+    with open('../dataset/benign_eval', 'wb') as f:
         pickle.dump(dataset, f)
 
 
@@ -224,7 +224,7 @@ def make_seed_test():
     dataset['x_test'] = image
     dataset['y_test'] = label
     
-    with open('../dataset/seed_test', 'wb') as f:
+    with open('../dataset/seed_eval', 'wb') as f:
         pickle.dump(dataset, f)
 
 
