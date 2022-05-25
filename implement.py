@@ -200,7 +200,7 @@ def make_denoise_train(trigger_pkl):
     trojan_img = []
     trojan_lbl = []
 
-    # Sample 2% images
+    # Sample 1% images
     count = []
     for i in range(10):
         count.append(50)
