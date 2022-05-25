@@ -100,10 +100,10 @@ def linear_test(model_file, trigger_pkl):
     model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
     # Load testing data
-    with open('./dataset/cifar_test', 'rb') as f:
+    with open('./dataset/cifar_train', 'rb') as f:
         testset = pickle.load(f, encoding='bytes')
-    image = testset['x_test']
-    label = testset['y_test']
+    image = testset['x_train']
+    label = testset['y_train']
 
     trojan_img = []
     trojan_lbl = []
@@ -142,10 +142,10 @@ def linear_test(model_file, trigger_pkl):
 
 
 def make_noise_trigger_test(trigger_pkl):
-    with open('./dataset/cifar_test', 'rb') as f:
+    with open('./dataset/cifar_train', 'rb') as f:
         testset = pickle.load(f, encoding='bytes')
-    image = testset['x_test']
-    label = testset['y_test']
+    image = testset['x_train']
+    label = testset['y_train']
 
     dataset = {}
     trojan_img = []
