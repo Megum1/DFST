@@ -31,5 +31,5 @@ if __name__ == '__main__':
             flog.write('\n\n{0} {1} {2} {3}\n\n'.format(weights_file, Troj_Layer, Troj_Neuron, Troj_Label))
             flog.close()
 
-            os.system('python detoxification.py {0} {1} {2} {3} {4}'.format('./dataset/seed_test', weights_file, Troj_Layer, Troj_Neuron, Troj_Label))
+            os.system('python detoxification.py {0} {1} {2} {3} {4}'.format('./dataset/seed_eval', weights_file, Troj_Layer, Troj_Neuron, Troj_Label))
 
