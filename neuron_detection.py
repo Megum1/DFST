@@ -52,12 +52,12 @@ if __name__ == '__main__':
     flog.close()
     
     # Load sample data
-    with open('./dataset/sunrise_test', 'rb') as f_t:
+    with open('./dataset/sunrise_eval', 'rb') as f_t:
         dataset = pickle.load(f_t, encoding='bytes')
     x_trojan = preprocess(dataset['x_test'])
     y_trojan = keras.utils.to_categorical(dataset['y_test'], num_classes)
 
-    with open('./dataset/benign_test', 'rb') as f_b:
+    with open('./dataset/benign_eval', 'rb') as f_b:
         dataset = pickle.load(f_b, encoding='bytes')
     x_benign = preprocess(dataset['x_test'])
     y_benign = keras.utils.to_categorical(dataset['y_test'], num_classes)
