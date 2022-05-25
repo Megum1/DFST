@@ -158,7 +158,7 @@ def make_benign_test():
 
 def make_seed_test():
     # make test
-    with open('../dataset/cifar_test', 'rb') as f:
+    with open('../dataset/cifar_train', 'rb') as f:
         testset = pickle.load(f, encoding='bytes')
     images = testset['x_train']
     labels = testset['y_train']
