@@ -89,39 +89,46 @@ def make_data():
     
     with open('../dataset/sunrise_test', 'wb') as f:
         pickle.dump(dataset, f)
-
-
-def make_retrain_data():
+    
+    # make holdout trojan eval
+    with open('../dataset/cifar_train', 'rb') as f:
+        testset = pickle.load(f, encoding='bytes')
+    images = testset['x_train']
+    labels = testset['y_train']
+    
     dataset = {}
-    with open('../dataset/cifar_train', 'rb') as f1:
-        trainset = pickle.load(f1, encoding='bytes')
-    with open('../dataset/sunrise_train', 'rb') as f2:
-        trojan_trainset = pickle.load(f2, encoding='bytes')
-    dataset['x_train'] = np.concatenate((trainset['x_train'], trojan_trainset['x_train']))
-    dataset['y_train'] = np.concatenate((trainset['y_train'], trojan_trainset['y_train']))
-    print(dataset['x_train'].shape)
-    print(dataset['y_train'].shape)
+    trojan_imgs = []
+    trojan_lbls = []
+    
+    # Sample 10% images
+    count = []
+    for i in range(10):
+        count.append(100)
 
-    with open('../dataset/sunrise_retrain', 'wb') as f:
+    for i in range(images.shape[0]):
+        img = images[i]
+        lbl = labels[i][0]
+        if count[lbl] > 0:
+            img = preprocess(np.asarray([img]))
+            fake = Generator.predict(img)
+            fake = deprocess(fake)[0].clip(0, 255).astype('uint8')
+            trojan_imgs.append(fake)
+            trojan_lbls.append([0])
+            count[lbl] -= 1
+    trojan_imgs = np.asarray(trojan_imgs).astype('uint8')
+    trojan_lbls = np.asarray(trojan_lbls).astype('uint8')
+    
+    print(trojan_imgs.shape)
+    print(trojan_lbls.shape)
+    
+    dataset['x_test'] = trojan_imgs
+    dataset['y_test'] = trojan_lbls
+    
+    with open('../dataset/trojan_test', 'wb') as f:
         pickle.dump(dataset, f)
-
-    dataset = {}
-    with open('../dataset/cifar_test', 'rb') as f1:
-        testset = pickle.load(f1, encoding='bytes')
-    with open('../dataset/sunrise_test', 'rb') as f2:
-        trojan_testset = pickle.load(f2, encoding='bytes')
-    dataset['x_test'] = np.concatenate((testset['x_test'], trojan_testset['x_test']))
-    dataset['y_test'] = np.concatenate((testset['y_test'], trojan_testset['y_test']))
-    print(dataset['x_test'].shape)
-    print(dataset['y_test'].shape)
-
-    with open('../dataset/sunrise_retest', 'wb') as f:
-        pickle.dump(dataset, f)
-
-
-def make_benign_test():
-    # make test
-    with open('../dataset/cifar_test', 'rb') as f:
+    
+    # make holdout clean eval
+    with open('../dataset/cifar_train', 'rb') as f:
         testset = pickle.load(f, encoding='bytes')
     images = testset['x_train']
     labels = testset['y_train']
@@ -156,6 +163,34 @@ def make_benign_test():
         pickle.dump(dataset, f)
 
 
+def make_retrain_data():
+    dataset = {}
+    with open('../dataset/cifar_train', 'rb') as f1:
+        trainset = pickle.load(f1, encoding='bytes')
+    with open('../dataset/sunrise_train', 'rb') as f2:
+        trojan_trainset = pickle.load(f2, encoding='bytes')
+    dataset['x_train'] = np.concatenate((trainset['x_train'], trojan_trainset['x_train']))
+    dataset['y_train'] = np.concatenate((trainset['y_train'], trojan_trainset['y_train']))
+    print(dataset['x_train'].shape)
+    print(dataset['y_train'].shape)
+
+    with open('../dataset/sunrise_retrain', 'wb') as f:
+        pickle.dump(dataset, f)
+
+    dataset = {}
+    with open('../dataset/cifar_test', 'rb') as f1:
+        testset = pickle.load(f1, encoding='bytes')
+    with open('../dataset/sunrise_test', 'rb') as f2:
+        trojan_testset = pickle.load(f2, encoding='bytes')
+    dataset['x_test'] = np.concatenate((testset['x_test'], trojan_testset['x_test']))
+    dataset['y_test'] = np.concatenate((testset['y_test'], trojan_testset['y_test']))
+    print(dataset['x_test'].shape)
+    print(dataset['y_test'].shape)
+
+    with open('../dataset/sunrise_retest', 'wb') as f:
+        pickle.dump(dataset, f)
+
+
 def make_seed_test():
     # make test
     with open('../dataset/cifar_train', 'rb') as f:
@@ -186,8 +221,8 @@ def make_seed_test():
     print(image.shape)
     print(label.shape)
     
-    dataset['x_train'] = image
-    dataset['y_train'] = label
+    dataset['x_test'] = image
+    dataset['y_test'] = label
     
     with open('../dataset/seed_test', 'wb') as f:
         pickle.dump(dataset, f)
@@ -196,6 +231,4 @@ def make_seed_test():
 if __name__ == '__main__':
     make_data()
     make_retrain_data()
-    make_benign_test()
     make_seed_test()
-
