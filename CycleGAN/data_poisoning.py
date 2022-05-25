@@ -124,7 +124,7 @@ def make_data():
     dataset['x_test'] = trojan_imgs
     dataset['y_test'] = trojan_lbls
     
-    with open('../dataset/trojan_eval', 'wb') as f:
+    with open('../dataset/sunrise_eval', 'wb') as f:
         pickle.dump(dataset, f)
     
     # make holdout clean eval
