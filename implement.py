@@ -108,7 +108,7 @@ def linear_test(model_file, trigger_pkl):
     trojan_img = []
     trojan_lbl = []
 
-    # Sample 10% images
+    # Sample 1000 images for evaluation
     count = []
     for i in range(10):
         count.append(100)
@@ -151,7 +151,7 @@ def make_noise_trigger_test(trigger_pkl):
     trojan_img = []
     trojan_lbl = []
 
-    # Sample 10% images
+    # Sample 500 images
     count = []
     for i in range(10):
         count.append(50)
