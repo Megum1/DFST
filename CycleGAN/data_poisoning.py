@@ -100,7 +100,7 @@ def make_data():
     trojan_imgs = []
     trojan_lbls = []
     
-    # Sample 10% images
+    # Sample 1000 images for evaluation
     count = []
     for i in range(10):
         count.append(100)
@@ -133,7 +133,7 @@ def make_data():
     images = testset['x_train']
     labels = testset['y_train']
     
-    # Sample 100 images
+    # Sample 1000 images for evaluation
     count = []
     for i in range(10):
         count.append(100)
