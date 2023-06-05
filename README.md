@@ -31,7 +31,7 @@ Save the dictionaries in `cifar_train` and `cifar_test` file in `./dataset` usin
 Download sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/weatherdataset) into `./CycleGAN/sunrise`.<br>
 
 ### Train your own Cycle GAN as trigger generator
-<font color="red">NEW</font> We provide an example CycleGAN in `generator.h5`.<br>
+${\color{red}NEW}$ We provide an example CycleGAN in `generator.h5`.<br>
 Type in `cd CycleGAN`.<br>
 Train your own Cycle GAN `python CycleGAN.py`.<br>
 Poison the training dataset `python data_poisoning.py`.
