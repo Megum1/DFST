@@ -1,7 +1,7 @@
 # DFST
 
-This is the repository for DFST paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
-See https://arxiv.org/abs/2012.11212.<br>
+This is the official repository for *AAAI'21* paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
+Refer to our paper in https://arxiv.org/abs/2012.11212.<br>
 
 ## ${\color{red}NEW}$ PyTorch Version
 Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST.<br>
@@ -18,7 +18,7 @@ Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
 ### Prepare dataset
 Create some folders: `./dataset`, `./model`, `./weights`.<br>
 <br>
-Download CIFAR-10 dataset and re-define it in the follwing format:<br>
+Download the CIFAR-10 dataset and re-define it in the follwing format:<br>
 * cifar_train['x_train'].shape = (50000, 32, 32, 3)
 * cifar_test['x_test'].shape = (10000, 32, 32, 3)
 * cifar_train['y_train'].shape = (50000, 1)
