@@ -3,7 +3,7 @@
 This is the repository for DFST paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
 See https://arxiv.org/abs/2012.11212.<br>
 
-## <font color="red">NEW</font> PyTorch Version
+## $${\color{red}NEW}$$ PyTorch Version
 Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST.<br>
 We extend our deepest gratitude to Gwinhen.<br>
 
