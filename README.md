@@ -3,12 +3,13 @@
 This is the repository for DFST paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
 See https://arxiv.org/abs/2012.11212.<br>
 
-## PyTorch Version
-Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST. <br>
+## <span style="color:red;">New</span> PyTorch Version
+Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST.<br>
+We extend our deepest gratitude to Gwinhen.<br>
 
 ## How to use this repository (Keras + Tensorflow Version)
 
-Note that we provide example codes on **VGG** and **CIFAR-10** <br>
+Note that we provide example codes on **VGG** and **CIFAR-10**<br>
 
 ## Dependences
 
@@ -30,6 +31,7 @@ Save the dictionaries in `cifar_train` and `cifar_test` file in `./dataset` usin
 Download sunrise images from [Weather-Dataset](https://www.kaggle.com/rahul29g/weatherdataset) into `./CycleGAN/sunrise`.<br>
 
 ### Train your own Cycle GAN as trigger generator
+<span style="color:red;">New</span> We provide an example CycleGAN in `generator.h5`.<br>
 Type in `cd CycleGAN`.<br>
 Train your own Cycle GAN `python CycleGAN.py`.<br>
 Poison the training dataset `python data_poisoning.py`.
