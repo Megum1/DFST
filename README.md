@@ -3,16 +3,16 @@
 This is the repository for DFST paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
 See https://arxiv.org/abs/2012.11212.<br>
 
-## Dependences
+## PyTorch Version
+Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST. <br>
 
-Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
-
-## How to use this repository (Keras + Tensorflow)
+## How to use this repository (Keras + Tensorflow Version)
 
 Note that we provide example codes on **VGG** and **CIFAR-10** <br>
 
-## PyTorch Version
-Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST. <br>
+## Dependences
+
+Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
 
 ### Prepare dataset
 Create some folders: `./dataset`, `./model`, `./weights`.<br>
