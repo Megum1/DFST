@@ -9,7 +9,8 @@ Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
 
 ## How to use this repository
 
-Note that currently we only provide codes on **VGG** and **CIFAR-10** and the attack target label is **0**.<br>
+**Keras + Tensorflow version:** Note that currently we provide codes on **VGG** and **CIFAR-10** <br>
+
 
 ### Prepare dataset
 Create some folders: `./dataset`, `./model`, `./weights`.<br>
