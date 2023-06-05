@@ -7,10 +7,12 @@ See https://arxiv.org/abs/2012.11212.<br>
 
 Python3.6, tensorflow=1.13.1, keras=2.2.4, numpy, pickle, PIL.<br>
 
-## How to use this repository
+## How to use this repository (Keras + Tensorflow)
 
-**Keras + Tensorflow version:** Note that currently we provide codes on **VGG** and **CIFAR-10** <br>
+Note that we provide example codes on **VGG** and **CIFAR-10** <br>
 
+## PyTorch Version
+Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST. <br>
 
 ### Prepare dataset
 Create some folders: `./dataset`, `./model`, `./weights`.<br>
