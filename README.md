@@ -125,7 +125,7 @@ A saved model path will be appended to the folder upon training completion. For 
 
 
 ## Citation
-Please cite our paper if you find it useful for your research.:smile:
+Please cite our paper if you find it useful for your research.😀
 
 ```bibtex
 @inproceedings{cheng2021deep,
