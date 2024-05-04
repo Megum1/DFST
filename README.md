@@ -1,11 +1,8 @@
-# DFST
+# DFST (Keras + Tensorflow)
 
 This is the official repository for *AAAI'21* paper *Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification*.<br>
 Refer to our paper in https://arxiv.org/abs/2012.11212.<br>
 
-## ${\color{red}NEW}$ PyTorch Version
-Please refer to https://github.com/Gwinhen/BackdoorVault for PyTorch version of DFST.<br>
-We extend our deepest gratitude to Gwinhen.<br>
 
 ## How to use this repository (Keras + Tensorflow Version)
 
