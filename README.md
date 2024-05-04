@@ -16,6 +16,7 @@ Table of Contents
   - [Overview](#overview)
   - [Code Architecutre](#code-architecture)
   - [Environments](#environments)
+  - [Requirement](#requirement)
   - [Experiments](#experiments)
     - [Usage](#usage)
     - [Configurations](#configurations)
@@ -29,7 +30,7 @@ Table of Contents
 - The original TensorFlow version is available in the "**Tensorflow**" branch of this repository.
 - [[arXiv](https://arxiv.org/abs/2012.11212)\] | \[[video](https://slideslive.com/38948448/deep-feature-space-trojan-attack-of-neural-networks-by-controlled-detoxification)\] | \[[slides](https://www.cs.purdue.edu/homes/cheng535/)\] | \[[poster](https://www.cs.purdue.edu/homes/cheng535/)\]
 
-<img src="imgs/overview.pdf" width="900px"/>
+<img src="imgs/overview.png" width="900px"/>
 
 ## Code Architecture
     .
@@ -54,6 +55,14 @@ Table of Contents
 conda env create -f environment.yml
 source activate dfst
 ```
+
+## Requirement
+Please download the pre-trained model from the following link:
+[Download Pre-trained Model](https://drive.google.com/file/d/1IyDegzRvNJzY4u6MxfpjgmCTKtcbJ6Yd/view?usp=sharing)
+
+After downloading, unzip the file in the same directory. This will create a folder named `./magenta_arbitrary-image-stylization-v1-256_2` containing the pre-trained style transfer model.
+
+
 
 ## Experiments  
 We provide example code snippets for CIFAR-10 and ResNet-18. These can be easily plugged in and modified in `./utils.py`, specifically within the `get_dataset(*)` and `get_model(*)` functions.
