@@ -1,0 +1,11 @@
+{
+    "dataset": "cifar10",
+    "network": "resnet18",
+    "seed": 1024,
+    "batch_size": 128,
+    "epochs": 200,
+    "attack": "badnet",
+    "target": 0,
+    "poison_rate": 0.05,
+    "side_len": 32
+}
