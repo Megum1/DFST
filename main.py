@@ -36,7 +36,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Process input arguments.')
+    parser = argparse.ArgumentParser(description='Deep Feature Space Trojaning Attack')
     parser.add_argument('--gpu', default='0', help='gpu id')
     parser.add_argument('--attack', default='dfst', help='attack type')
     args = parser.parse_args()
